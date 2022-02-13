@@ -1,4 +1,4 @@
-# speech-to-text-js
+# Speech to Text JS
 ![](https://github.com/marcusitalo/speech-to-text-js/blob/master/assets/screenshot/1.png?raw=true)
 
 ------------
