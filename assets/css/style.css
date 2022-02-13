@@ -1,0 +1,187 @@
+* {
+    margin: 0px auto;
+    padding: 0px;
+    text-align: left;
+}
+
+html {
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: top left;
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: 100% 99%;
+    width: 100vw;
+    height: 100vh;
+}
+
+#no-browser-support {
+    background-color: var(--color-primary-hover);
+    color: var(--color-white);
+    padding: 10px;
+}
+
+#logo {
+    width: 25%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: -5.1%;
+    border: 10px dotted var(--color-primary);
+    border-radius: 50%;
+    padding: 16px;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#app {
+    width: 75%;
+    margin: 10px;
+}
+
+.page-description {
+    font-size: 12px;
+    color: var(--color-primary);
+}
+
+.row {
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn {
+    color: var(--color-primary);
+    padding: 15px;
+    cursor: pointer;
+}
+
+#recording-instructions {
+    float: right;
+    padding: 15px;
+    font-size: 12px;
+}
+
+#note-textarea {
+    margin: 20px 0;
+    width: 100%;
+    border: 0px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    resize: initial;
+    background: var(--color-secondary);
+    box-shadow: 0px 0px 5px -2px var(--color-primary-hover);
+}
+
+h3 {
+    margin: 0px;
+}
+
+a:hover,
+i:hover {
+    color: var(--color-primary-hover);
+}
+
+#controls {
+    margin-top: -35px;
+    text-align: left;
+}
+
+#notes {
+    height: 45vh;
+    overflow: auto;
+}
+
+li {
+    list-style: none;
+}
+
+.note {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin: 10px 4px;
+    box-shadow: 0px 0px 5px -2px var(--color-primary-hover);
+    background-color: var(--color-white-80);
+}
+
+.content {
+    text-align: left;
+    padding: 10px 15px;
+    margin: 0px;
+    font-size: smaller;
+}
+
+.header {
+    font-size: smaller;
+    text-align: end;
+    padding: 5px;
+    margin: 0px;
+}
+
+.header a {
+    margin: 5px;
+}
+
+.date {
+    font-size: 10px;
+    color: var(--color-primary);
+    margin: 10px;
+}
+
+#voiceSelect {
+    background-color: var(--color-primary-hover);
+    color: var(--color-white);
+    font-size: 13px;
+
+}
+
+@media (max-width: 768px) {
+    html {
+        background-image: none;
+    }
+
+    body {
+        background-size: 90%;
+    }
+
+    .container {
+        margin-top: 5vh;
+    }
+
+    #app {
+        width: 95%;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-scrollbar);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+}

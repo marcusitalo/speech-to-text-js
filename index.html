@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Speech to Text</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+
+    <!-- CSS Reset -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+
+    <!-- Milligram CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="assets/css/colors.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    
+    <div class="container">
+      <div class="row" id="no-browser-support" style="display:none">
+        <div class="column center">
+          <h3 >Desculpe, seu navegador não suporta a API Web Speech.<br>
+            Tente abrir esta demonstração no Google Chrome.</h3>
+        </div>
+      </div>
+
+      <div id="app">
+        <div class="row">
+          <div class="column center">
+            <h3>Adicionar nova nota de voz</h3>
+            <label class="page-description">Este aplicativo permite que você faça anotações de voz e/ou texto e as reproduza.</label>
+            <div class="input-single">
+              <textarea
+                id="note-textarea"
+                placeholder="Crie uma nova anotações digitando ou usando o reconhecimento de voz."
+                rows="6"
+              ></textarea>
+            </div>
+            <div id="controls">
+              <i id="start-record-btn" title="Iniciar gravação" class="fas fa-microphone-alt btn"></i>
+
+              <i id="pause-record-btn" title="Pausar gravação" class="fas fa-microphone-alt-slash btn"></i>
+
+              <i id="save-note-btn" title="Salvar anotação" class="fas fa-file-download btn"></i>
+
+              <span id="recording-instructions">
+                Pressione o botão <i class="fas fa-microphone-alt"></i> e permita o acesso ao microfone para iniciar a gravação .
+              </span>
+            </div>
+            <h3 style="margin-top: 25px;">Minhas anotações de voz</h3>
+            <ul id="notes">
+              <li>
+                <p class="no-notes">Você não tem nenhuma anotações de voz.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column center">
+            <label style="font-size: 10px;"> Selecione o idioma que deseja ouvir as anotações</label>
+            <select id="voiceSelect"></select>
+          </div>
+        </div>
+      </div>
+      <!-- /app -->
+    
+    </div>
+
+    <script src="assets/js/speechRecognition.js" async defer></script>
+    <script src="assets/js/speechSynthesis.js" async defer></script>
+    <script src="assets/js/localStorage.js" async defer></script>
+  </body>
+</html>
